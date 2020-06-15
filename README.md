@@ -42,3 +42,33 @@ The activation function is what mimics a neuron in your brain, it either fires o
 Each of these weights and biases is what is called a parameter, if you see how many connections there are you can deduce that there are a lot of parameters, a weight and a bias is one paramater, so if we have a bias then each connection can have two parameters. The machine can modify each weight independently with the goal of fitting to our desired output, for example training a network to recognize a human in an image, if we have three outputs, Dog, Cat and Human, we would want our ouput to be ```[0,0,1]```. 
 
 A neural network is then just a giant function where we allow the machine to tweak variables and parameters to output desired results.
+
+
+# MNIST
+<br/>
+<p style="text-align: center;"></p>
+    <img src="assets/images/NNinputoutput.png" width="600px"/>
+</p>
+<small>Fig 3: MINIST Input to Output</small>
+<br/>
+<br/>
+
+
+# Learning Rate
+<br/>
+<p style="text-align: center;"></p>
+    <img src="assets/images/learningrate.png" width="300px"/>
+</p>
+<small>Fig 4: Learning Rate</small>
+<br/>
+<br/>
+How does the learning rate correspond to training times and how well the model will learn?
+
+
+The goal with optimization is to get loss to be at the minumum point on the optimization curve. The learning rate in part, dicates the size of the step that the optimizer will take to reduce loss. Each time data passes through the NN different valued weights will generate different loss, as the data that goes through the network batch after batch, the optimizer will tweak the weights to produce the least loss so that the output contains the generalizations.
+
+The learning rate step size if too big will overshoot, a too small step size will undershoot, or converge at a single point. A fixed step size will need to be correct in order to reduce loss, its up to us to tweak its value so that the loss decreases. Another way is using a decaying learning rate, so that the steps start big and become smaller.
+
+Using the optimizer we calculate loss based on the output from the model and the desired output, then re-callibrate the weights based on the loss and repeat. So we keep feeding data through the NN reducing loss and improving accuracy. When training models, we optimize for loss which gives us more accurate models. 
+
+Loss is calucated in a number of ways depending on the output, for example a One Hot Vector like [0, 0, 1, 0] which contains one value that is on/hot would use mean squared error. For our example, the loss is a single scaler value so nll_loss is used.

@@ -22,6 +22,7 @@ auto-save-list
 tramp
 .\#*
 
+keys/
 # Org-mode
 .org-id-locations
 *_archive
