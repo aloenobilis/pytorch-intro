@@ -1,4 +1,8 @@
-# pytorch-intro
+<img src="assets/images/pytorch-logo.png" width="800px" />
+# pytorch-intro 
+
+
+
 
 # Setup 
 Pytorch setup - https://pytorch.org/get-started/locally/
