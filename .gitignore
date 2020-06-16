@@ -23,6 +23,10 @@ tramp
 .\#*
 
 keys/
+PetImages/
+MNIST/
+training_data.npy
+
 # Org-mode
 .org-id-locations
 *_archive
